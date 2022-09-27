@@ -5,9 +5,9 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 Try running some of the following tasks:
 
 ```shell
-    "test": "npx hardhat test test/nft-airdrop/Airdrop.test.ts",
-    "coverage": "npx hardhat coverage --testfiles test",
-    "compile": "npx hardhat compile",
-    "polygon": "npx hardhat run scripts/deploy.ts --network polygon",
-    "polygon:airdrop": "npx hardhat run scripts/nft-airdrop/deploy.ts --network polygon"
+    npm run test
+    npm run coverage
+    npm run compile
+    npm run polygon
+    npm run polygon:airdrop
 ```
