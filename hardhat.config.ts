@@ -2,6 +2,7 @@ import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
+import "hardhat-contract-sizer";
 import "solidity-coverage";
 
 import * as dotenv from "dotenv";
@@ -10,7 +11,22 @@ import { HardhatUserConfig } from "hardhat/config";
 dotenv.config();
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.17",
+  solidity: {
+    version: "0.8.17",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+  contractSizer: {
+    alphaSort: false,
+    disambiguatePaths: true,
+    runOnCompile: true,
+    strict: false,
+    only: [],
+  },
   networks: {
     polygon: {
       url: "https://rpc-mumbai.maticvigil.com" /*"https://polygon-rpc.com"*/,
