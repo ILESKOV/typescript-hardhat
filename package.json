@@ -7,7 +7,10 @@
   "dependencies": {
     "@nomiclabs/hardhat-waffle": "^2.0.3",
     "@openzeppelin/contracts": "^4.7.3",
-    "dotenv": "^16.0.2"
+    "dotenv": "^16.0.2",
+    "hardhat-contract-sizer": "^2.6.1",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32"
   },
   "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.",
   "version": "1.0.0",
@@ -16,9 +19,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "npx hardhat test test/nft-airdrop/Airdrop.test.ts",
+    "coverage": "npx hardhat coverage --testfiles test",
     "compile": "npx hardhat compile",
-    "polygon": "npx hardhat run scripts/deploy.ts --network polygon"
+    "polygon": "npx hardhat run scripts/deploy.ts --network polygon",
+    "polygon:airdrop": "npx hardhat run scripts/nft-airdrop/deploy.ts --network polygon"
   },
   "repository": {
     "type": "git",
