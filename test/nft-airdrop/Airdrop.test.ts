@@ -4,7 +4,6 @@ import { Wallet } from "ethers";
 import { ethers } from "hardhat";
 import keccak256 from "keccak256";
 import { MerkleTree } from "merkletreejs";
-
 import { Airdrop__factory, SuperNFT__factory } from "../../typechain-types";
 
 describe("Airdrop", () => {
