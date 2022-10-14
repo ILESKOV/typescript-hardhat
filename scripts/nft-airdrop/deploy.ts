@@ -56,6 +56,7 @@ async function main() {
   });
 }
 
+//very important
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
